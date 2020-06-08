@@ -21,9 +21,14 @@ export const RoomsProvider: React.FC = ({ children }) => {
     setIsLoading(false);
   }, []);
 
+  const getRoom = (slug: string) => {
+    console.log(rooms);
+    return rooms.find((room: any) => room.slug === slug);
+  };
+
   return (
     <RoomsContext.Provider
-      value={{ rooms, sortedRooms, featuredRooms, isLoading }}
+      value={{ rooms, sortedRooms, featuredRooms, isLoading, getRoom }}
     >
       {children}
     </RoomsContext.Provider>

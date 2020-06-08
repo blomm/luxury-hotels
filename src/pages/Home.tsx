@@ -8,7 +8,7 @@ import { Featured } from "../components/Featured";
 export const Home = () => {
   return (
     <>
-      <Hero hero="defaultHero">
+      <Hero className="defaultHero">
         <Banner
           title="Luxurious Rooms"
           subTitle="Deluxe rooms starting from £199"
